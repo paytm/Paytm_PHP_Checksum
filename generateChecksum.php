@@ -25,7 +25,7 @@ foreach($_POST as $key=>$value)
 {  
   $pos = strpos($value, $findme);
   $pospipe = strpos($value, $findmepipe);
-  if ($pos === false or $pospipe === false) 
+  if ($pos === false || $pospipe === false) 
     {
         $paramList[$key] = $value;
     }
