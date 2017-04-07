@@ -9,6 +9,7 @@ $checkSum = "";
 
 // below code snippet is mandatory, so that no one can use your checksumgeneration url for other purpose .
 $findme   = 'REFUND';
+$findmepipe = '|';
 
 $paramList = array();
 
@@ -23,7 +24,8 @@ $paramList["WEBSITE"] = '';
 foreach($_POST as $key=>$value)
 {  
   $pos = strpos($value, $findme);
-  if ($pos === false) 
+  $pospipe = strpos($value, $findmepipe);
+  if ($pos === false or $pospipe === false) 
     {
         $paramList[$key] = $value;
     }
