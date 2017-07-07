@@ -57,11 +57,9 @@ function generateSalt_e($length) {
 }
 
 function checkString_e($value) {
-	$myvalue = ltrim($value);
-	$myvalue = rtrim($myvalue);
-	if ($myvalue == 'null')
-		$myvalue = '';
-	return $myvalue;
+	if ($value == 'null')
+		$value = '';
+	return $value;
 }
 
 function getChecksumFromArray($arrayList, $key, $sort=1) {
