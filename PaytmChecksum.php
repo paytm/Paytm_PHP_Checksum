@@ -6,11 +6,10 @@
  *
  * @author     Lalit Kumar
  * @version    2.0
- * @link       https://developer.paytm.com/docs/checksum/
+ * @link       https://developer.paytm.com/docs/checksum/#php
  */
 
-namespace paytm\checksum;
-class PaytmChecksumLibrary{
+class PaytmChecksum{
 
 	private static $iv = "@@@@&&&&####$$$$";
 
@@ -64,6 +63,9 @@ class PaytmChecksumLibrary{
 		if(!is_array($params) && !is_string($params)){
 			throw new Exception("string or array expected, ".gettype($params)." given");
 		}
+		if(isset($params['CHECKSUMHASH'])){
+			unset($params['CHECKSUMHASH']);
+		}
 		if(is_array($params)){
 			$params = self::getStringByParams($params);
 		}		
@@ -97,7 +99,7 @@ class PaytmChecksumLibrary{
 	static private function getStringByParams($params) {
 		ksort($params);		
 		$params = array_map(function ($value){
-			return ($value == null) ? "" : $value;
+			return ($value !== null && strtolower($value) !== "null") ? $value : "";
 	  	}, $params);
 		return implode("|", $params);
 	}
