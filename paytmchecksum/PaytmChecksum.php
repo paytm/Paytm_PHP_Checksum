@@ -63,7 +63,7 @@ class PaytmChecksum{
 
 	static public function verifySignature($params, $key, $checksum){
 		if(!is_array($params) && !is_string($params)){
-			throw new Exception("string or array expected, ".gettype($params)." given");
+			throw new \Exception("string or array expected, ".gettype($params)." given");
 		}
 		if(isset($params['CHECKSUMHASH'])){
 			unset($params['CHECKSUMHASH']);
