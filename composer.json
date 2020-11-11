@@ -11,12 +11,7 @@
    ],
      "homepage": "https://developer.paytm.com/docs/checksum/#php",
     "require": {
-        "ext-json": "*",
-        "php": ">=5.6.0",
-        "ext-curl": "*",
-        "ext-openssl": "*",
-        "netresearch/jsonmapper": "^1.4",
-        "monolog/monolog": "^1.24"
+        "php": ">=5.6.0"
     },
  "autoload": {
         "psr-4": {"paytm\\paytmchecksum\\": "paytmchecksum/"}
