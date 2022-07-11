@@ -5,7 +5,7 @@
  * AES128 encryption algorithm to ensure the safety of transaction data.
  *
  * @author     Lalit Kumar
- * @version    2.0
+ * @version    2.0.1
  * @link       https://developer.paytm.com/docs/checksum/#php
  */
 
