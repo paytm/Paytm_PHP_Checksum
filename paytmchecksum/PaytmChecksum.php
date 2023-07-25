@@ -4,7 +4,7 @@
  * application and Paytm over network have not been tampered with. We use SHA256 hashing and 
  * AES128 encryption algorithm to ensure the safety of transaction data.
  *
- * @author     Lalit Kumar
+ * @author     Integration Dev Paytm
  * @version    2.0.1
  * @link       https://developer.paytm.com/docs/checksum/#php
  */
