@@ -85,7 +85,7 @@ class PaytmChecksum{
 
 	static private function generateRandomString($length) {
 		$random = "";
-		srand((double) microtime() * 1000000);
+		//srand((double) microtime() * 1000000);
 
 		$data = "9876543210ZYXWVUTSRQPONMLKJIHGFEDCBAabcdefghijklmnopqrstuvwxyz!@#$&_";	
 
